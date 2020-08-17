@@ -3,7 +3,6 @@ const fs = require('fs');
 require('dotenv').config();
 
 
-
 let scrapeData = async () => {
 
   const browser = await puppeteer.launch({ headless: false });
@@ -20,14 +19,16 @@ let scrapeData = async () => {
   
   await page.click('#_evidon-accept-button');
  
-  //Enter email and password
+  //Enter username and password
   await page.type('input[type=email]', process.env.email)
   await page.type('input[type="password"]', process.env.password)
 
   //login button
   await page.click('#page-wrapper > div > div > div > section > form > button')
   await page.waitFor(1000);
-  await page.click('section > .\_1aUg5 > .\_1mm64:nth-child(1) > .\_1MwNx > .\_2u4DS')
+  await page.waitForSelector('.\_2bmqM > section > .\_1aUg5 > .\_1mm64:nth-child(3) > .\_3E9gF')
+  await page.click('.\_2bmqM > section > .\_1aUg5 > .\_1mm64:nth-child(3) > .\_3E9gF')
+
 
   await page.waitForSelector('div > div > .\_2RfCm > .TiUAv > .\_2y6-o')
   await page.click('div > div > .\_2RfCm > .TiUAv > .\_2y6-o')
@@ -43,7 +44,7 @@ let scrapeData = async () => {
 
 
  
- // handler picks up errors in the page by itself
+
   page.on('requestfailed', err => console.error('REQUEST_FAILED:\n' + util.inspect(err)))
   
   
@@ -79,16 +80,15 @@ let scrapeData = async () => {
 scrapeData().then((value) => {
   console.log(value);
   
-  async() => {
-    await browser.close()
-  }
+  
 
     
 
   fs.appendFile('accounts.json', JSON.stringify(value), function (err) {
     if (err) throw err;
     
-   
+    
+
 
   });
   
