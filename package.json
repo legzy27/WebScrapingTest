@@ -1,0 +1,22 @@
+{
+  "name": "web-scraping-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha scrapedata.js --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.20",
+    "mocha": "^8.1.1",
+    "mochawesome": "^6.1.1",
+    "puppeteer": "^5.2.1",
+    "puppeteer-recorder": "^1.0.7",
+    "should": "^13.2.3"
+  }
+}
