@@ -11,6 +11,10 @@ WebScrapting automation test was developed using puppeteer is a Node library whi
 * npm install puppeteer 
 
 
-## Run Test
+## Note
+* Before running the test insert email & password go scrapedata.js and check for comment
 
-* node scrapedata.js    
+## Run Test
+* node scrapedata.js   
+
+

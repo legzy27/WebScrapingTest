@@ -20,8 +20,8 @@ let scrapeData = async () => {
   await page.click('#_evidon-accept-button');
  
   //Enter username and password
-  await page.type('input[type=email]', '')
-  await page.type('input[type="password"]', '')
+  await page.type('input[type=email]', 'candidate+2@wonderbill.com')
+  await page.type('input[type="password"]', 'BCh+"/nuWn34mj3/')
 
   //login button
   await page.click('#page-wrapper > div > div > div > section > form > button')
