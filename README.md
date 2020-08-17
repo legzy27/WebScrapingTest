@@ -5,7 +5,7 @@ WebScrapting automation test was developed using puppeteer is a Node library whi
 
 ## Installation and Setup
 
-* Clone the repository
+* Clone the repository https://github.com/legzy27/WebScrapingTest.git
 * Once you download the repository cd into the directory
 * Install necessary dependencies with `npm install` command before the tests can run locally
 * npm install puppeteer 
